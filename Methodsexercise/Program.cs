@@ -4,10 +4,13 @@ namespace Methodsexercise
 {
     class Program
     {
-        public static int Sum(int num1, int num2)
+        public static int Sum(params int[] list)
         {
-            var answer = num1 + num2;
-            return answer;
+            int sum = 0;
+            foreach( int numbers in list)
+            {
+                sum += numbers;
+            }return sum;
         }
 
         public static int Multiply(int num1, int num2, int num3)
